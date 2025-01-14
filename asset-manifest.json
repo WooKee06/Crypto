@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Crypto/static/css/main.547fcd9c.css",
+    "main.js": "/Crypto/static/js/main.b8dc4414.js",
+    "static/media/main.svg": "/Crypto/static/media/main.289d4b275c6f8bf729120b1fe2d8c935.svg",
+    "static/media/Group 24.svg": "/Crypto/static/media/Group 24.281421ff7dacb620164593fba0adc298.svg",
+    "static/media/ringProgress2.svg": "/Crypto/static/media/ringProgress2.b0924b903b8965111cf463cc3556ed1e.svg",
+    "static/media/ringProgress.svg": "/Crypto/static/media/ringProgress.e3891004f18561a611ff99e695b26f09.svg",
+    "static/media/search.svg": "/Crypto/static/media/search.6be49ba6f968b296e42c112be60527c5.svg",
+    "static/media/ic_sell2.svg": "/Crypto/static/media/ic_sell2.fcfac11dfee1669a162cbfd4087177c1.svg",
+    "static/media/ic_buy2.svg": "/Crypto/static/media/ic_buy2.10ef93095b672ea6458f71fbc02c862b.svg",
+    "static/media/ic_buy.svg": "/Crypto/static/media/ic_buy.a91c69822968e3ead9c290294baba831.svg",
+    "static/media/ic_sell.svg": "/Crypto/static/media/ic_sell.04aaf2258f65078dd6e5c5ee2352e085.svg",
+    "static/media/notification.svg": "/Crypto/static/media/notification.a738ef16d8d323f8cf284ac68f255bef.svg",
+    "static/media/angle-down.svg": "/Crypto/static/media/angle-down.f3c0c98007609526bcad151f88107791.svg",
+    "index.html": "/Crypto/index.html",
+    "main.547fcd9c.css.map": "/Crypto/static/css/main.547fcd9c.css.map",
+    "main.b8dc4414.js.map": "/Crypto/static/js/main.b8dc4414.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.547fcd9c.css",
+    "static/js/main.b8dc4414.js"
+  ]
+}
