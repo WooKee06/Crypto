@@ -1,0 +1,520 @@
+$transition: all 0.3s ease-in-out;
+
+main {
+	.alerts-wrapper {
+		display: flex;
+		align-items: flex-start;
+		gap: 8px;
+		height: max-content;
+		padding: 8px 16px;
+		@media screen and (max-width: 890px) {
+			flex-direction: column;
+		}
+
+		.alerts {
+			width: 30%;
+			display: flex;
+
+			@media screen and (max-width: 1220px) {
+				width: 40%;
+			}
+			@media screen and (max-width: 890px) {
+				width: 100%;
+			}
+			> .section-wrap {
+				padding: 16px 24px;
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+				background-color: var(--background-accent);
+				border-radius: 6px;
+				width: 100%;
+
+				> .wrap__header {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					> h2 {
+						font-size: 16px;
+						line-height: 18px;
+						font-weight: 600;
+					}
+				}
+
+				> .wrap-content {
+					display: flex;
+					flex-direction: column;
+					gap: 12px;
+
+					> .select-wrap {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						gap: 4px;
+
+						> .coin,
+						.timeframe,
+						.move,
+						.type {
+							display: flex;
+							flex-direction: column;
+							gap: 4px;
+
+							.select {
+								position: relative;
+
+								.select__header {
+									border: none;
+									background-color: var(--background-ui);
+									border-radius: 4px;
+									cursor: pointer;
+									display: flex;
+									width: 100%;
+									.select__current {
+										font-size: 13px;
+										font-weight: 400;
+										line-height: 24px;
+										padding: 8px;
+										white-space: nowrap; /* Текст не переносится */
+										overflow: hidden; /* Обрезаем всё за пределами блока */
+										text-overflow: ellipsis;
+									}
+									.select__icon {
+										align-items: center;
+										display: flex;
+										flex-shrink: 0;
+										justify-content: center;
+										height: 40px;
+										margin-left: auto;
+										text-align: center;
+										width: 40px;
+										opacity: 0.4;
+										transform: rotate(-180deg);
+										transition: $transition;
+									}
+								}
+								.select__body {
+									border: none;
+									border-radius: 4px;
+									background-color: var(--background-ui);
+									border-top: 0;
+									// display: none;
+									opacity: 0;
+									left: 0;
+									position: absolute;
+									right: 0;
+									top: 110%;
+
+									height: 0;
+									overflow: hidden;
+
+									box-shadow: 0px 4px 8px rgba(120, 120, 120, 0.2);
+									border-radius: 4px;
+
+									z-index: 9;
+
+									.select__items {
+										display: flex;
+										flex-direction: column;
+										gap: 8px;
+										padding: 12px;
+
+										.select__item {
+											cursor: pointer;
+											font-size: 12px;
+											font-weight: 400;
+											transition: $transition;
+
+											&:hover {
+												color: var(--green);
+											}
+										}
+									}
+								}
+							}
+							.select.is-active {
+								.select__body {
+									opacity: 1;
+									transition: $transition;
+									height: auto;
+									overflow: visible;
+								}
+
+								.select__icon {
+									opacity: 1;
+									transform: rotate(0deg);
+								}
+							}
+
+							.title {
+								font-size: 14px;
+								font-weight: 400;
+								color: var(--text-accent);
+							}
+						}
+
+						> .coin {
+							width: 40%;
+
+							@media (max-width: 1540px) {
+								width: 55%;
+							}
+						}
+						> .timeframe {
+							width: 60%;
+							@media (max-width: 1540px) {
+								width: 50%;
+							}
+						}
+						> .move {
+							width: 45%;
+						}
+						> .price {
+							display: flex;
+							flex-direction: column;
+							gap: 4px;
+							width: 55%;
+
+							.title {
+								font-size: 14px;
+								font-weight: 400;
+								color: var(--text-accent);
+							}
+
+							.price-content {
+								display: flex;
+								align-items: center;
+								gap: 10px;
+								border: none;
+								background-color: var(--background-ui);
+								border-radius: 4px;
+								cursor: pointer;
+								display: flex;
+								padding: 7px;
+
+								> svg {
+									path {
+										fill: var(--text-accent);
+									}
+								}
+
+								> input {
+									background: none;
+									border: none;
+									outline: none;
+									color: var(--text);
+									line-height: 24px;
+
+									&::placeholder {
+										color: var(--text-accent);
+									}
+								}
+							}
+						}
+					}
+				}
+
+				button {
+					padding: 10px 12px;
+					width: 100%;
+
+					font-size: 14px;
+					font-weight: 600;
+					color: var(--text);
+
+					background-color: var(--blue);
+					border: none;
+					border-radius: 6px;
+					cursor: pointer;
+				}
+
+				textarea {
+					width: 100%;
+					padding: 8px 0;
+					border: none;
+					outline: none;
+
+					background-color: var(--background-ui);
+					border-radius: 4px;
+					cursor: pointer;
+					resize: none;
+				}
+			}
+		}
+
+		.position {
+			width: 70%;
+			display: flex;
+			@media screen and (max-width: 1220px) {
+				width: 60%;
+			}
+			@media screen and (max-width: 890px) {
+				width: 100%;
+			}
+			> .section-wrap {
+				padding: 16px 24px;
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+				background-color: var(--background-accent);
+				border-radius: 6px;
+				width: 100%;
+
+				@media screen and (max-width: 1300px) {
+					width: 96%;
+				}
+				@media screen and (max-width: 930px) {
+					width: 94%;
+				}
+				> .wrap__header {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					> h2 {
+						font-size: 16px;
+						line-height: 18px;
+						font-weight: 600;
+					}
+
+					input {
+						border: none;
+						background-color: var(--background-ui);
+						border-radius: 4px;
+						cursor: pointer;
+						padding: 7px;
+						outline: none;
+
+						&::placeholder {
+							color: var(--text-accent);
+						}
+					}
+				}
+
+				> .wrap-content {
+					display: flex;
+					flex-direction: column;
+					gap: 12px;
+
+					thead {
+						text-align: left;
+
+						tr {
+							vertical-align: baseline;
+						}
+						th {
+							font-size: 14px;
+							font-weight: 400;
+							color: var(--text-accent);
+							line-height: 18px;
+							padding: 15px 0;
+
+							&:last-child {
+								text-align: right;
+							}
+
+							&:nth-child(1) {
+								width: 5%;
+							}
+							&:nth-child(2) {
+								width: 10%;
+							}
+							&:nth-child(3) {
+								width: 10%;
+							}
+						}
+					}
+					tbody {
+						td {
+							color: var(--text);
+							font-size: 14px;
+							font-weight: 400;
+
+							.price {
+								display: flex;
+								align-items: center;
+								gap: 5px;
+							}
+
+							padding: 10px 5px;
+							&:nth-child(4) {
+								color: var(--green);
+								font-weight: 600;
+							}
+							&:nth-child(5) {
+								font-weight: 500;
+								text-align: center;
+							}
+							&:nth-child(1) {
+								font-weight: 500;
+							}
+
+							&:last-child {
+								text-align: right;
+								display: flex;
+								gap: 5px;
+								min-width: 190px;
+								align-items: center;
+
+								@media (max-width: 620px) {
+									justify-content: space-between;
+								}
+
+								.table-btn {
+									display: flex;
+									align-items: center;
+									gap: 10px;
+
+									@media (max-width: 420px) {
+										flex-direction: column;
+									}
+								}
+
+								button {
+									&:nth-child(2) {
+										padding: 6px 5px;
+
+										@media (max-width: 420px) {
+											width: 100%;
+										}
+									}
+								}
+							}
+
+							button {
+								padding: 8px;
+								border-radius: 4px;
+								background-color: var(--background-ui);
+								border: none;
+
+								font-size: 13px;
+								font-weight: 400;
+								color: var(--text);
+								cursor: pointer;
+
+								transition: $transition;
+
+								&:hover {
+									background-color: var(--border);
+									color: var(--text);
+								}
+
+								&:nth-child(2) {
+									width: max-content;
+									background: none;
+									padding: 0 5px;
+									border: 1px solid var(--background-ui);
+
+									svg {
+										path {
+											fill: transparent;
+											stroke: var(--red);
+										}
+									}
+								}
+							}
+						}
+					}
+
+					table {
+						width: 100%;
+						margin: 0;
+						padding: 0;
+						border-collapse: collapse;
+						border-spacing: 0;
+					}
+
+					table tr {
+						padding: 5px;
+						border-bottom: 1px solid var(--background-ui);
+					}
+
+					table th,
+					table td {
+						padding: 10px;
+						text-align: center;
+					}
+
+					table th {
+						font-size: 14px;
+						letter-spacing: 1px;
+					}
+
+					@media screen and (max-width: 1300px) {
+						overflow-y: scroll;
+					}
+
+					@media screen and (max-width: 600px) {
+						table {
+							border: 0;
+						}
+
+						table thead {
+							display: none;
+						}
+
+						table tr {
+							margin-bottom: 40px;
+							display: block;
+						}
+
+						table td {
+							display: block;
+							text-align: right;
+							font-size: 13px;
+
+							border-right: 1px solid transparent;
+						}
+
+						table td:last-child {
+							border-bottom: 0;
+						}
+
+						table td:before {
+							content: attr(data-label);
+							float: left;
+							text-transform: uppercase;
+							font-weight: bold;
+						}
+
+						.td-wrap {
+							justify-content: flex-end;
+						}
+					}
+				}
+
+				button {
+					padding: 10px 12px;
+					width: 100%;
+
+					font-size: 14px;
+					font-weight: 600;
+					color: var(--text);
+
+					background-color: var(--blue);
+					border: none;
+					border-radius: 6px;
+					cursor: pointer;
+					transition: $transition;
+
+					&:hover {
+						opacity: 0.6;
+					}
+				}
+
+				textarea {
+					width: 100%;
+					padding: 8px 0;
+					border: none;
+					outline: none;
+
+					background-color: var(--background-ui);
+					border-radius: 4px;
+					cursor: pointer;
+					resize: none;
+				}
+			}
+		}
+	}
+}
